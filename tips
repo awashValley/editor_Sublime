@@ -1,0 +1,50 @@
+
+## html auto-completion
+     html:5
+
+## configure C to run in Sublime Text-3
+        $ Go to Tools --> Build System --> New Build System
+        $ Paste the the code below,
+               
+
+        {
+            "cmd" : ["gcc $file_name -o ${file_base_name}                 && ./${file_base_name}"],
+            "selector" : "source.c",
+            "shell": true,
+            "working_dir" : "$file_path"
+        }
+
+    $ save it as 'myC...' and close it. It will be added 
+          in Tools --> Build System (options)
+    $ change the option to 'myC...' in Tools --> Build 
+         System option.
+
+
+## compare two text files
+          > [Quara-Nicolas Kline]: There's actually one built in. If you open a folder (Click "File" | "Open Folder..." And 
+                choose a folder at a level that contains both files), Sumblime Text 2/3 will open a new window. Multi-select the 
+                two files you want to compare in the sidebar, then right-click and choose "Diff Files...". Voila. 
+
+## How to install plugins to Sublime Text 2 editor?
+        * ctrl + shift + P
+        * type in install and press ENTER, then search for the package you would like to install.
+
+## MySQL in Sublime Text
+        * Go to: Tools -> Build System -> New Build System
+        * Copy and paste the text below and save.
+                {
+                    "cmd": ["/Applications/xampp/xamppfiles/bin/mysql", 
+                    "-u", "root",     
+                    "-h", "localhost",
+                    "-e", "source $file", "-t"],
+                    "selector": "source.sql", "quiet": true
+            }    
+    * To run, ctrl + B
+
+## Build sys scripts you have created yourself should be in:
+    * /Users/YOURUSERNAME/Library/Application Support/Sublime Text 3/Packages/Use
+
+## a Must to have plugins for Sublime Text
+        * http://codezag.com/8-sublime-text-editor-plugins-programmers/
+
+           
